@@ -19,11 +19,11 @@ namespace _2._2._1_Toggle_colors
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (fmColor.ActiveForm.BackColor == Color.Blue)
+            if (BackColor == Color.Blue)
             {
-                fmColor.ActiveForm.BackColor = Color.Green;
+                BackColor = Color.Green;
             } else {
-                fmColor.ActiveForm.BackColor = Color.Blue;
+                BackColor = Color.Blue;
             }
         }
     }

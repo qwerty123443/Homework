@@ -19,17 +19,17 @@ namespace _2._2._2_Toggle_colors_extended
 
         private void btColor_Click(object sender, EventArgs e)
         {
-            if (fmColor.ActiveForm.BackColor == Color.Red)
+            if (BackColor == Color.Red)
             {
-                fmColor.ActiveForm.BackColor = Color.White;
+                BackColor = Color.White;
             }
-            else if (fmColor.ActiveForm.BackColor == Color.White)
+            else if (BackColor == Color.White)
             {
-                fmColor.ActiveForm.BackColor = Color.Blue;
+                BackColor = Color.Blue;
             }
             else
             {
-                fmColor.ActiveForm.BackColor = Color.Red;
+                BackColor = Color.Red;
             }
 
         }

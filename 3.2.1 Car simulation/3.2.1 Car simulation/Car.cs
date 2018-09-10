@@ -29,6 +29,8 @@ namespace _3._2._1_Car_simulation
         public void SpeedDown()
         {
             currentSpeed -= 10;
+            if (currentSpeed < 0)
+                currentSpeed = 0;
         }
     }
 }

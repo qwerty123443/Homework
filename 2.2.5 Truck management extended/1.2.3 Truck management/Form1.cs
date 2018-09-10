@@ -21,7 +21,6 @@ namespace _1._2._3_Truck_management
         {
             int boxes = Convert.ToInt32(tbOrderAmount.Text);
             
-            
             int remainingboxes;
             int remainingPallets;
             int fulltrucks;
