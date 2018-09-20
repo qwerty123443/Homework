@@ -17,7 +17,13 @@ namespace _3._2._1_Car_simulation
         public Form1()
         {
             InitializeComponent();
-            
+            myCar.SetBrand("Ferrari");
+            myCar.SetMaxSpeed(240);
+            lblInfo.Text = myCar.AsAString();
+            myCar2.SetBrand("Bughatti");
+            myCar2.SetMaxSpeed(270);
+            lblInfo2.Text = myCar2.AsAString();
+
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -33,17 +39,6 @@ namespace _3._2._1_Car_simulation
         {
             myCar.SpeedDown();
             lblInfo.Text = myCar.AsAString();
-        }
-
-        private void Form1_Shown(object sender, EventArgs e)
-        {
-            myCar.SetBrand("Ferrari");
-            myCar.SetMaxSpeed(240);
-            lblInfo.Text = myCar.AsAString();
-            myCar2.SetBrand("Bughatti");
-            myCar2.SetMaxSpeed(270);
-            lblInfo2.Text = myCar2.AsAString();
-
         }
 
         private void btnSpeedUp2_Click(object sender, EventArgs e)
