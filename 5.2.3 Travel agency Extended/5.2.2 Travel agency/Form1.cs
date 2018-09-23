@@ -12,12 +12,7 @@ namespace _5._2._2_Travel_agency
 {
     public partial class Form1 : Form
     {
-        private static int MAX_DESTINATINOS = 35;
-
-        private string[] destinations = new string[MAX_DESTINATINOS];
-        private double[] prices = new double[MAX_DESTINATINOS];
-        private double[] profits = new double[MAX_DESTINATINOS];
-        private bool[] booked = new bool[MAX_DESTINATINOS];
+        private Destination[] destinations = new Destination[35];
         private double totalProfit = 0;
         private int index = 0;
 
@@ -35,27 +30,23 @@ namespace _5._2._2_Travel_agency
                 double profit = Convert.ToDouble(tbProfit.Text);
 
                 totalProfit += profit;
-                destinations[index] = destination;
-                prices[index] = price;
-                profits[index] = profit;
-                lstDestinations.Items.Add(destinations[index] + " costs " + prices[index].ToString("0.00") + ".\n Profit is " + profits[index]);
-                index++;
+                destinations[index] = new Destination(destination, price, profit);
+                lstDestinations.Items.Add(destinations[index].getDestination() + " costs " + destinations[index].getPrice().ToString("0.00") + ".\n Profit is " + destinations[index++].getProfit());
                 lblTotalProfit.Text = "Total Profit: €" + totalProfit;
             }
         }
 
         private void btnRemove_Click(object sender, EventArgs e)
         {
-            index--;
-            lstDestinations.Items.RemoveAt(index);
-            totalProfit -= profits[index];
+            lstDestinations.Items.RemoveAt(--index);
+            totalProfit -= destinations[index].getProfit();
             lblTotalProfit.Text = "Total Profit: €" + totalProfit;
         }
 
         private void btnBookDestination_Click(object sender, EventArgs e)
         {
             int i = lstDestinations.SelectedIndex;
-            booked[i] = true;
+            destinations[i].book(1);
         }
     }
 }
