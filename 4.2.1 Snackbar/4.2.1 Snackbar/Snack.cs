@@ -44,7 +44,7 @@ namespace _4._2._1_Snackbar
         {
             numberInStock -= n;
         }
-        public void ChangePrice(int costPrice)
+        public void ChangePrice(double costPrice)
         {
             this.costPrice = costPrice;
         }

@@ -29,16 +29,16 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.rbMeal1 = new System.Windows.Forms.RadioButton();
-            this.rbMeal2 = new System.Windows.Forms.RadioButton();
-            this.rbMeal3 = new System.Windows.Forms.RadioButton();
-            this.rbMeal4 = new System.Windows.Forms.RadioButton();
             this.rbMeal5 = new System.Windows.Forms.RadioButton();
-            this.rbStijn = new System.Windows.Forms.RadioButton();
-            this.rbBainca = new System.Windows.Forms.RadioButton();
-            this.rbRomy = new System.Windows.Forms.RadioButton();
+            this.rbMeal4 = new System.Windows.Forms.RadioButton();
+            this.rbMeal3 = new System.Windows.Forms.RadioButton();
+            this.rbMeal2 = new System.Windows.Forms.RadioButton();
+            this.rbMeal1 = new System.Windows.Forms.RadioButton();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.rbMiesjel = new System.Windows.Forms.RadioButton();
+            this.rbRomy = new System.Windows.Forms.RadioButton();
+            this.rbBainca = new System.Windows.Forms.RadioButton();
+            this.rbStijn = new System.Windows.Forms.RadioButton();
             this.btnSetOderForPerson = new System.Windows.Forms.Button();
             this.btnFinaliseOrder = new System.Windows.Forms.Button();
             this.lblTotal = new System.Windows.Forms.Label();
@@ -55,23 +55,58 @@
             this.groupBox1.Controls.Add(this.rbMeal1);
             this.groupBox1.Location = new System.Drawing.Point(13, 13);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(200, 140);
+            this.groupBox1.Size = new System.Drawing.Size(200, 111);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Meals";
             // 
-            // groupBox2
+            // rbMeal5
             // 
-            this.groupBox2.Controls.Add(this.rbMiesjel);
-            this.groupBox2.Controls.Add(this.rbRomy);
-            this.groupBox2.Controls.Add(this.rbBainca);
-            this.groupBox2.Controls.Add(this.rbStijn);
-            this.groupBox2.Location = new System.Drawing.Point(220, 13);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(200, 140);
-            this.groupBox2.TabIndex = 1;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Users";
+            this.rbMeal5.AutoSize = true;
+            this.rbMeal5.Location = new System.Drawing.Point(7, 88);
+            this.rbMeal5.Name = "rbMeal5";
+            this.rbMeal5.Size = new System.Drawing.Size(57, 17);
+            this.rbMeal5.TabIndex = 4;
+            this.rbMeal5.TabStop = true;
+            this.rbMeal5.Text = "Meal 5";
+            this.rbMeal5.UseVisualStyleBackColor = true;
+            this.rbMeal5.CheckedChanged += new System.EventHandler(this.rbMeal5_CheckedChanged);
+            // 
+            // rbMeal4
+            // 
+            this.rbMeal4.AutoSize = true;
+            this.rbMeal4.Location = new System.Drawing.Point(7, 71);
+            this.rbMeal4.Name = "rbMeal4";
+            this.rbMeal4.Size = new System.Drawing.Size(57, 17);
+            this.rbMeal4.TabIndex = 3;
+            this.rbMeal4.TabStop = true;
+            this.rbMeal4.Text = "Meal 4";
+            this.rbMeal4.UseVisualStyleBackColor = true;
+            this.rbMeal4.CheckedChanged += new System.EventHandler(this.rbMeal4_CheckedChanged);
+            // 
+            // rbMeal3
+            // 
+            this.rbMeal3.AutoSize = true;
+            this.rbMeal3.Location = new System.Drawing.Point(7, 54);
+            this.rbMeal3.Name = "rbMeal3";
+            this.rbMeal3.Size = new System.Drawing.Size(57, 17);
+            this.rbMeal3.TabIndex = 2;
+            this.rbMeal3.TabStop = true;
+            this.rbMeal3.Text = "Meal 3";
+            this.rbMeal3.UseVisualStyleBackColor = true;
+            this.rbMeal3.CheckedChanged += new System.EventHandler(this.rbMeal3_CheckedChanged);
+            // 
+            // rbMeal2
+            // 
+            this.rbMeal2.AutoSize = true;
+            this.rbMeal2.Location = new System.Drawing.Point(7, 37);
+            this.rbMeal2.Name = "rbMeal2";
+            this.rbMeal2.Size = new System.Drawing.Size(57, 17);
+            this.rbMeal2.TabIndex = 1;
+            this.rbMeal2.TabStop = true;
+            this.rbMeal2.Text = "Meal 2";
+            this.rbMeal2.UseVisualStyleBackColor = true;
+            this.rbMeal2.CheckedChanged += new System.EventHandler(this.rbMeal2_CheckedChanged);
             // 
             // rbMeal1
             // 
@@ -85,53 +120,54 @@
             this.rbMeal1.UseVisualStyleBackColor = true;
             this.rbMeal1.CheckedChanged += new System.EventHandler(this.rbMeal1_CheckedChanged);
             // 
-            // rbMeal2
+            // groupBox2
             // 
-            this.rbMeal2.AutoSize = true;
-            this.rbMeal2.Location = new System.Drawing.Point(7, 44);
-            this.rbMeal2.Name = "rbMeal2";
-            this.rbMeal2.Size = new System.Drawing.Size(57, 17);
-            this.rbMeal2.TabIndex = 1;
-            this.rbMeal2.TabStop = true;
-            this.rbMeal2.Text = "Meal 2";
-            this.rbMeal2.UseVisualStyleBackColor = true;
-            this.rbMeal2.CheckedChanged += new System.EventHandler(this.rbMeal2_CheckedChanged);
+            this.groupBox2.Controls.Add(this.rbMiesjel);
+            this.groupBox2.Controls.Add(this.rbRomy);
+            this.groupBox2.Controls.Add(this.rbBainca);
+            this.groupBox2.Controls.Add(this.rbStijn);
+            this.groupBox2.Location = new System.Drawing.Point(220, 13);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(181, 111);
+            this.groupBox2.TabIndex = 1;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Users";
             // 
-            // rbMeal3
+            // rbMiesjel
             // 
-            this.rbMeal3.AutoSize = true;
-            this.rbMeal3.Location = new System.Drawing.Point(7, 69);
-            this.rbMeal3.Name = "rbMeal3";
-            this.rbMeal3.Size = new System.Drawing.Size(57, 17);
-            this.rbMeal3.TabIndex = 2;
-            this.rbMeal3.TabStop = true;
-            this.rbMeal3.Text = "Meal 3";
-            this.rbMeal3.UseVisualStyleBackColor = true;
-            this.rbMeal3.CheckedChanged += new System.EventHandler(this.rbMeal3_CheckedChanged);
+            this.rbMiesjel.AutoSize = true;
+            this.rbMiesjel.Location = new System.Drawing.Point(7, 71);
+            this.rbMiesjel.Name = "rbMiesjel";
+            this.rbMiesjel.Size = new System.Drawing.Size(57, 17);
+            this.rbMiesjel.TabIndex = 3;
+            this.rbMiesjel.TabStop = true;
+            this.rbMiesjel.Text = "Miesjel";
+            this.rbMiesjel.UseVisualStyleBackColor = true;
+            this.rbMiesjel.CheckedChanged += new System.EventHandler(this.rbMiesjel_CheckedChanged);
             // 
-            // rbMeal4
+            // rbRomy
             // 
-            this.rbMeal4.AutoSize = true;
-            this.rbMeal4.Location = new System.Drawing.Point(7, 92);
-            this.rbMeal4.Name = "rbMeal4";
-            this.rbMeal4.Size = new System.Drawing.Size(57, 17);
-            this.rbMeal4.TabIndex = 3;
-            this.rbMeal4.TabStop = true;
-            this.rbMeal4.Text = "Meal 4";
-            this.rbMeal4.UseVisualStyleBackColor = true;
-            this.rbMeal4.CheckedChanged += new System.EventHandler(this.rbMeal4_CheckedChanged);
+            this.rbRomy.AutoSize = true;
+            this.rbRomy.Location = new System.Drawing.Point(7, 54);
+            this.rbRomy.Name = "rbRomy";
+            this.rbRomy.Size = new System.Drawing.Size(52, 17);
+            this.rbRomy.TabIndex = 2;
+            this.rbRomy.TabStop = true;
+            this.rbRomy.Text = "Romy";
+            this.rbRomy.UseVisualStyleBackColor = true;
+            this.rbRomy.CheckedChanged += new System.EventHandler(this.rbRomy_CheckedChanged);
             // 
-            // rbMeal5
+            // rbBainca
             // 
-            this.rbMeal5.AutoSize = true;
-            this.rbMeal5.Location = new System.Drawing.Point(7, 116);
-            this.rbMeal5.Name = "rbMeal5";
-            this.rbMeal5.Size = new System.Drawing.Size(57, 17);
-            this.rbMeal5.TabIndex = 4;
-            this.rbMeal5.TabStop = true;
-            this.rbMeal5.Text = "Meal 5";
-            this.rbMeal5.UseVisualStyleBackColor = true;
-            this.rbMeal5.CheckedChanged += new System.EventHandler(this.rbMeal5_CheckedChanged);
+            this.rbBainca.AutoSize = true;
+            this.rbBainca.Location = new System.Drawing.Point(7, 37);
+            this.rbBainca.Name = "rbBainca";
+            this.rbBainca.Size = new System.Drawing.Size(58, 17);
+            this.rbBainca.TabIndex = 1;
+            this.rbBainca.TabStop = true;
+            this.rbBainca.Text = "Bianca";
+            this.rbBainca.UseVisualStyleBackColor = true;
+            this.rbBainca.CheckedChanged += new System.EventHandler(this.rbBainca_CheckedChanged);
             // 
             // rbStijn
             // 
@@ -145,45 +181,9 @@
             this.rbStijn.UseVisualStyleBackColor = true;
             this.rbStijn.CheckedChanged += new System.EventHandler(this.rbStijn_CheckedChanged);
             // 
-            // rbBainca
-            // 
-            this.rbBainca.AutoSize = true;
-            this.rbBainca.Location = new System.Drawing.Point(7, 44);
-            this.rbBainca.Name = "rbBainca";
-            this.rbBainca.Size = new System.Drawing.Size(58, 17);
-            this.rbBainca.TabIndex = 1;
-            this.rbBainca.TabStop = true;
-            this.rbBainca.Text = "Bianca";
-            this.rbBainca.UseVisualStyleBackColor = true;
-            this.rbBainca.CheckedChanged += new System.EventHandler(this.rbBainca_CheckedChanged);
-            // 
-            // rbRomy
-            // 
-            this.rbRomy.AutoSize = true;
-            this.rbRomy.Location = new System.Drawing.Point(6, 67);
-            this.rbRomy.Name = "rbRomy";
-            this.rbRomy.Size = new System.Drawing.Size(52, 17);
-            this.rbRomy.TabIndex = 2;
-            this.rbRomy.TabStop = true;
-            this.rbRomy.Text = "Romy";
-            this.rbRomy.UseVisualStyleBackColor = true;
-            this.rbRomy.CheckedChanged += new System.EventHandler(this.rbRomy_CheckedChanged);
-            // 
-            // rbMiesjel
-            // 
-            this.rbMiesjel.AutoSize = true;
-            this.rbMiesjel.Location = new System.Drawing.Point(6, 92);
-            this.rbMiesjel.Name = "rbMiesjel";
-            this.rbMiesjel.Size = new System.Drawing.Size(57, 17);
-            this.rbMiesjel.TabIndex = 3;
-            this.rbMiesjel.TabStop = true;
-            this.rbMiesjel.Text = "Miesjel";
-            this.rbMiesjel.UseVisualStyleBackColor = true;
-            this.rbMiesjel.CheckedChanged += new System.EventHandler(this.rbMiesjel_CheckedChanged);
-            // 
             // btnSetOderForPerson
             // 
-            this.btnSetOderForPerson.Location = new System.Drawing.Point(13, 160);
+            this.btnSetOderForPerson.Location = new System.Drawing.Point(17, 130);
             this.btnSetOderForPerson.Name = "btnSetOderForPerson";
             this.btnSetOderForPerson.Size = new System.Drawing.Size(75, 23);
             this.btnSetOderForPerson.TabIndex = 2;
@@ -193,7 +193,7 @@
             // 
             // btnFinaliseOrder
             // 
-            this.btnFinaliseOrder.Location = new System.Drawing.Point(94, 160);
+            this.btnFinaliseOrder.Location = new System.Drawing.Point(98, 130);
             this.btnFinaliseOrder.Name = "btnFinaliseOrder";
             this.btnFinaliseOrder.Size = new System.Drawing.Size(97, 23);
             this.btnFinaliseOrder.TabIndex = 3;
@@ -204,7 +204,7 @@
             // lblTotal
             // 
             this.lblTotal.AutoSize = true;
-            this.lblTotal.Location = new System.Drawing.Point(197, 165);
+            this.lblTotal.Location = new System.Drawing.Point(201, 135);
             this.lblTotal.Name = "lblTotal";
             this.lblTotal.Size = new System.Drawing.Size(37, 13);
             this.lblTotal.TabIndex = 4;
@@ -214,7 +214,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(437, 236);
+            this.ClientSize = new System.Drawing.Size(416, 159);
             this.Controls.Add(this.lblTotal);
             this.Controls.Add(this.btnFinaliseOrder);
             this.Controls.Add(this.btnSetOderForPerson);

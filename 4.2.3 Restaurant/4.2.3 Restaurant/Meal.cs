@@ -4,8 +4,8 @@ namespace _4._2._3_Restaurant
 {
     class Meal
     {
-        string description;
-        double price;
+        private string description;
+        private double price;
 
         public Meal(string description, double price)
         {
@@ -15,6 +15,10 @@ namespace _4._2._3_Restaurant
         public double getPrice()
         {
             return price;
+        }
+        public string getDescription()
+        {
+            return description;
         }
     }
 }

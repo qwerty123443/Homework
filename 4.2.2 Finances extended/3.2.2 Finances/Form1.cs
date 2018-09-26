@@ -11,8 +11,8 @@ using System.Windows.Forms;
 namespace _3._2._2_Finances
 {
     public partial class Form1 : Form
-    {
-        private Person me = new Person("Stijn Rutjens", "a@b.c", 18, "this is the first wallet", 100, "This is the second wallet", 200);
+    { 
+        private Person me = new Person("Stijn Rutjens", "a@b.c", 18, "this is the first wallet", 10, "This is the second wallet", 200);
         public Form1()
         {
             InitializeComponent();
@@ -26,7 +26,7 @@ namespace _3._2._2_Finances
 
         private void btnShowInfo_Click(object sender, EventArgs e)
         {
-            lblWalletOwner.Text = $"Wallet belongs to " + me.GetName();
+            lblWalletOwner.Text = "Wallet belongs to " + me.GetName();
             lblAmountMoney.Text = "Amount of money is € " + me.getWallet1().GetMoney();
         }
 
@@ -45,13 +45,13 @@ namespace _3._2._2_Finances
         private void btnAddMoney2_Click(object sender, EventArgs e)
         {
             me.getWallet2().AddMoney(Convert.ToInt32(tbAddAmount2.Text));
-            lblAmountMoney2.Text = "Amount of money is € " + me.getWallet2().GetMoney();
+            updateInfo();
         }
 
         private void btnRemoveMoney2_Click(object sender, EventArgs e)
         {
             me.getWallet2().RemoveMoney(Convert.ToInt32(tbRemoveAmount2.Text));
-            lblAmountMoney2.Text = "Amount of money is € " + me.getWallet2().GetMoney();
+            updateInfo();
         }
 
         private void btnToOtherWallet_Click(object sender, EventArgs e)
@@ -61,8 +61,7 @@ namespace _3._2._2_Finances
             {
                 me.getWallet1().RemoveMoney(amountToTransfer);
                 me.getWallet2().AddMoney(amountToTransfer);
-                lblAmountMoney.Text = "Amount of money is € " + me.getWallet1().GetMoney();
-                lblAmountMoney2.Text = "Amount of money is € " + me.getWallet2().GetMoney();
+                updateInfo();
             }
         }
 
@@ -73,9 +72,14 @@ namespace _3._2._2_Finances
             {
                 me.getWallet2().RemoveMoney(amountToTransfer);
                 me.getWallet1().AddMoney(amountToTransfer);
-                lblAmountMoney.Text  = "Amount of money is € " + me.getWallet1().GetMoney();
-                lblAmountMoney2.Text = "Amount of money is € " + me.getWallet2().GetMoney();
+                updateInfo();
             }
+        }
+
+        private void updateInfo()
+        {
+            lblAmountMoney.Text = "Amount of money is € " + me.getWallet1().GetMoney();
+            lblAmountMoney2.Text = "Amount of money is € " + me.getWallet2().GetMoney();
         }
     }
 }

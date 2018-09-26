@@ -15,11 +15,11 @@ namespace _4._2._3_Restaurant
         private Person selectedPerson;
         private Meal selectedMeal;
 
-        private Meal meal1 = new Meal("Meal1", 1);
-        private Meal meal2 = new Meal("Meal2", 2);
-        private Meal meal3 = new Meal("Meal3", 3);
-        private Meal meal4 = new Meal("Meal4", 4);
-        private Meal meal5 = new Meal("Meal5", 5);
+        private Meal meal1 = new Meal("Meal 1", 1);
+        private Meal meal2 = new Meal("Meal 2", 2);
+        private Meal meal3 = new Meal("Meal 3", 3);
+        private Meal meal4 = new Meal("Meal 4", 4);
+        private Meal meal5 = new Meal("Meal 5", 5);
 
         private Person person1 = new Person("Stijn");
         private Person person2 = new Person("Bianca");
