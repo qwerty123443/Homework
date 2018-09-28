@@ -46,7 +46,8 @@ namespace _5._2._2_Travel_agency
         private void btnBookDestination_Click(object sender, EventArgs e)
         {
             int i = lstDestinations.SelectedIndex;
-            destinations[i].book(1);
+            int season = Convert.ToInt32(tbSeason);
+            destinations[i].book(1, season);
         }
     }
 }

@@ -39,6 +39,8 @@
             this.lblProfit = new System.Windows.Forms.Label();
             this.lblTotalProfit = new System.Windows.Forms.Label();
             this.btnBookDestination = new System.Windows.Forms.Button();
+            this.tbSeason = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lstDestinations
@@ -60,7 +62,7 @@
             // 
             // tbPrice
             // 
-            this.tbPrice.Location = new System.Drawing.Point(10, 34);
+            this.tbPrice.Location = new System.Drawing.Point(10, 35);
             this.tbPrice.Margin = new System.Windows.Forms.Padding(2);
             this.tbPrice.Name = "tbPrice";
             this.tbPrice.Size = new System.Drawing.Size(76, 20);
@@ -88,7 +90,7 @@
             // 
             // btnAddDestination
             // 
-            this.btnAddDestination.Location = new System.Drawing.Point(10, 84);
+            this.btnAddDestination.Location = new System.Drawing.Point(10, 122);
             this.btnAddDestination.Margin = new System.Windows.Forms.Padding(2);
             this.btnAddDestination.Name = "btnAddDestination";
             this.btnAddDestination.Size = new System.Drawing.Size(75, 20);
@@ -126,7 +128,7 @@
             // lblTotalProfit
             // 
             this.lblTotalProfit.AutoSize = true;
-            this.lblTotalProfit.Location = new System.Drawing.Point(154, 85);
+            this.lblTotalProfit.Location = new System.Drawing.Point(151, 88);
             this.lblTotalProfit.Name = "lblTotalProfit";
             this.lblTotalProfit.Size = new System.Drawing.Size(76, 13);
             this.lblTotalProfit.TabIndex = 9;
@@ -134,7 +136,7 @@
             // 
             // btnBookDestination
             // 
-            this.btnBookDestination.Location = new System.Drawing.Point(338, 40);
+            this.btnBookDestination.Location = new System.Drawing.Point(338, 37);
             this.btnBookDestination.Name = "btnBookDestination";
             this.btnBookDestination.Size = new System.Drawing.Size(75, 23);
             this.btnBookDestination.TabIndex = 10;
@@ -142,11 +144,29 @@
             this.btnBookDestination.UseVisualStyleBackColor = true;
             this.btnBookDestination.Click += new System.EventHandler(this.btnBookDestination_Click);
             // 
+            // tbSeason
+            // 
+            this.tbSeason.Location = new System.Drawing.Point(338, 64);
+            this.tbSeason.Name = "tbSeason";
+            this.tbSeason.Size = new System.Drawing.Size(75, 20);
+            this.tbSeason.TabIndex = 11;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(418, 68);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(70, 13);
+            this.label1.TabIndex = 12;
+            this.label1.Text = "Season (1..4)";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(600, 366);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.tbSeason);
             this.Controls.Add(this.btnBookDestination);
             this.Controls.Add(this.lblTotalProfit);
             this.Controls.Add(this.lblProfit);
@@ -179,6 +199,8 @@
         private System.Windows.Forms.Label lblProfit;
         private System.Windows.Forms.Label lblTotalProfit;
         private System.Windows.Forms.Button btnBookDestination;
+        private System.Windows.Forms.TextBox tbSeason;
+        private System.Windows.Forms.Label label1;
     }
 }
 
