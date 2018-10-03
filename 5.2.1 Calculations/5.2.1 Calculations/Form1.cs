@@ -41,17 +41,26 @@ namespace _5._2._1_Calculations
 
         private void btnProlblem3_Click(object sender, EventArgs e)
         {
-            int n = Convert.ToInt32(tbNumber.Text);
+            int limit = Convert.ToInt32(tbNumber.Text);
             int result = 0;
             int i = 0;
-            while (result < n)
+            for (i = 0; result < limit; i++)
             {
-                i++;
                 result += i * i;
             }
-            result -= i * i;
             i--;
-            lblResult.Text = $"answer is {result.ToString()}\n and {i}";
+            result -= i * i;
+            lblResult.Text = $"answer is {result.ToString()}\n and {i-1}"; // i-1 because we have to use the last used i (and this i is the next i)
+            
+            // apperantly we can't use while loops yet
+            //while (result < limit)
+            //{
+            //    i++;
+            //    result += i * i;
+            //}
+            //result -= i * i;
+            //i--;
+            //lblResult.Text = $"answer is {result.ToString()}\n and {i}";
         }
     }
 }
