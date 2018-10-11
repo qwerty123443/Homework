@@ -34,11 +34,31 @@ namespace _5._2._2_Travel_agency
                 double price = Convert.ToDouble(tbPrice.Text);
                 double profit = Convert.ToDouble(tbProfit.Text);
 
+                lstDestinations.Items.Clear();
+                double max = 0;
+                int maxindex = 0;
+                for (int i = 0; i < index; i++)
+                {
+                    if (prices[i] < max)
+                    {
+                        maxindex = i;
+                        max = prices[i];
+                    }
+                }
                 totalProfit += profit;
                 destinations[index] = destination;
-                prices[index] = price;
                 profits[index] = profit;
-                lstDestinations.Items.Add(destinations[index] + " costs " + prices[index].ToString("0.00") + ".\n Profit is " + profits[index]);
+                for (int i = 0; i < index; i++)
+                {
+                    if (i == maxindex)
+                    {
+                        lstDestinations.Items.Add(destinations[index] + " costs " + (prices[index]).ToString("0.00") + ".\n Profit is " + profits[index]*0.8);
+                    }
+                    else
+                    {
+                        lstDestinations.Items.Add(destinations[index] + " costs " + prices[index].ToString("0.00") + ".\n Profit is " + profits[index]);
+                    }
+                }
                 index++;
                 lblTotalProfit.Text = "Total Profit: €" + totalProfit;
             }
@@ -55,7 +75,17 @@ namespace _5._2._2_Travel_agency
         private void btnBookDestination_Click(object sender, EventArgs e)
         {
             int i = lstDestinations.SelectedIndex;
-            booked[i] = true;
+            if (!booked[i])
+            {
+                lstDestinations.Items[i] += " BOOKED";
+                booked[i] = true;
+            }
+            else
+            {
+                booked[i] = false;
+                lstDestinations.Items[i] = destinations[index] + " costs " + prices[index].ToString("0.00") + ".\n Profit is " + profits[index];
+            }
+            
         }
     }
 }
