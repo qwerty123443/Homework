@@ -78,7 +78,7 @@ namespace PCS1MockExam
         private void btnSpecies_Click(object sender, EventArgs e)
         {
             lbOutput.Items.Clear();
-            string[] birds = new string[cmbSpottedBird.Items.Count];
+
             int maxBirds = 0;
             string maxBirdsSpotter = "";
 
