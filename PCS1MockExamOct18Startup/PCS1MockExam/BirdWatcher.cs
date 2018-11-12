@@ -80,6 +80,7 @@
                     if (uniquespecie == bird)
                     {
                         hasSpecies = true;
+                        break;
                     }
                 }
                 if (!hasSpecies)
